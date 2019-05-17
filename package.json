@@ -16,11 +16,11 @@
   "scripts": {
     "fedora29": "docker run -it --rm -v \"$(pwd):/data\" --entrypoint=/bin/sh --name fedora29 fedora29",
     "fedora29:build": "docker build -t fedora29 ./src/fedora29/.",
-    "release": "> ./CHANGELOG.md && standard-version",
+    "release": "standard-version",
     "test": "find ./src -name Dockerfile -exec dockerfilelint {} \\;"
   },
   "devDependencies": {
     "dockerfilelint": "^1.5.0",
-    "standard-version": "^5.0.1"
+    "standard-version": "^6.0.1"
   }
 }

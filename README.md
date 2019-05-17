@@ -2,7 +2,7 @@
 
 Run a container against a local run script. 
 
-Contains `Dockerfile`s aimed at my own need to double check OS context when testing shell scripts.
+Contains `Dockerfile`s aimed at my own need to double check OS context when testing scripts.
 
 ## Requirements
 The basic requirements:
@@ -38,3 +38,18 @@ The basic requirements:
    $ docker stop [ID OR NAME]
    ```
    
+## What's currently included, quick start
+1. Fedora 29
+    - run
+      ```shell
+      $ docker run -it --rm -v "$(pwd):/data" --entrypoint=/bin/sh --name fedora29 fedora29
+      ```
+    - packages
+      - git
+      - node, npm and yarn
+      - python37, pylint, python3-flake8, and pytest
+        ```shell
+        $ pylint [somefile/somedir]
+        $ flake8 [somefile/somedir]
+        $ pytest [somefile/somedir]
+        ```
