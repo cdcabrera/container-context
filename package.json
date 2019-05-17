@@ -1,6 +1,6 @@
 {
   "name": "container-context",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run a container against a local run script...",
   "author": "CD Cabrera <cabrera.code@gmail.com>",
   "repository": {
