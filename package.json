@@ -14,6 +14,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "centos7": "docker run -it --rm -v \"$(pwd):/centos7\" --entrypoint=/bin/sh --name centos7 centos7",
+    "centos7:build": "docker build -t centos7 ./src/centos7/.",
     "fedora29": "docker run -it --rm -v \"$(pwd):/data\" --entrypoint=/bin/sh --name fedora29 fedora29",
     "fedora29:build": "docker build -t fedora29 ./src/fedora29/.",
     "release": "standard-version",

@@ -39,6 +39,14 @@ The basic requirements:
    ```
    
 ## What's currently included, quick start
+1. Centos 7
+    - run
+      ```shell
+      $ docker run -it --rm -v "$(pwd):/data" --entrypoint=/bin/sh --name centos7 centos7
+      ```
+    - packages
+      - git
+      - node, npm and yarn
 1. Fedora 29
     - run
       ```shell
