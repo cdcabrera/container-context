@@ -2,7 +2,7 @@
 
 Run a container against a local run script. 
 
-Contains `Dockerfile`s aimed at my own need to double check OS context when testing scripts.
+Contains `Dockerfile`s aimed at installing toolsets without junking up your own environment with one more tool.
 
 ## Requirements
 The basic requirements:
@@ -53,3 +53,9 @@ The basic requirements:
         $ flake8 [somefile/somedir]
         $ pytest [somefile/somedir]
         ```
+1. Travis CI
+    - original sources, https://github.com/caktux/docker-travis-cli and https://github.com/skandyla/docker-travis-cli
+    - run
+      ```shell
+      $ docker run -it --rm -v "$(pwd):/travis" --entrypoint=/bin/sh --name travis travis
+      ```

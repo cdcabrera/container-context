@@ -17,7 +17,9 @@
     "fedora29": "docker run -it --rm -v \"$(pwd):/data\" --entrypoint=/bin/sh --name fedora29 fedora29",
     "fedora29:build": "docker build -t fedora29 ./src/fedora29/.",
     "release": "standard-version",
-    "test": "find ./src -name Dockerfile -exec dockerfilelint {} \\;"
+    "test": "find ./src -name Dockerfile -exec dockerfilelint {} \\;",
+    "travis": "docker run -it --rm -v \"$(pwd):/travis\" --entrypoint=/bin/sh --name travis travis",
+    "travis:build": "docker build -t travis ./src/travis-ci/."
   },
   "devDependencies": {
     "dockerfilelint": "^1.5.0",
