@@ -14,6 +14,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "asciidoctor": "docker run -it --rm -v \"$(pwd)/src:/data\" -v \"$(pwd)/dist:/output\" --name asciidoctor asciidoctor",
+    "asciidoctor:build": "docker build -t asciidoctor ./src/asciidoctor/.",
+    "asciidoctor:helloWorld": "yarn asciidoctor -we \"asciidoctor -t -dbook -a toc -v -o ../output/helloWorld.html ../data/asciidoctor/example/helloWorld.adoc\"",
     "centos7": "docker run -it --rm -v \"$(pwd):/centos7\" --entrypoint=/bin/sh --name centos7 centos7",
     "centos7:build": "docker build -t centos7 ./src/centos7/.",
     "fedora29": "docker run -it --rm -v \"$(pwd):/data\" --entrypoint=/bin/sh --name fedora29 fedora29",
